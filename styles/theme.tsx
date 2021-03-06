@@ -12,7 +12,8 @@ export const theme = {
     },
   },
   fontSizes: {
-    default: rem('14px')
+    default: {size: rem('14px'), lineHeight: '1.43'},
+    xl: {size: rem('30px'), lineHeight: '1.2'},
   },
   fontFamilies: {
     default: '"Inter", sans-serif',

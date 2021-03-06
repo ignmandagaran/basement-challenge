@@ -1,6 +1,7 @@
 import { createGlobalStyle } from 'styled-components';
 import { normalize } from 'polished';
 import { DefaultTheme } from 'styled-components';
+import { theme } from './theme';
 
 const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   ${normalize()}
@@ -12,11 +13,14 @@ const GlobalStyle = createGlobalStyle<{ theme: DefaultTheme }>`
   body {
     ${({ theme }) => {
     const { colors, fontSizes, fontFamilies, fontWeights } = theme;
-
     const styles = `
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
       background: ${colors.white};
       color: ${colors.black};
-      font-size: ${fontSizes.default};
+      font-size: ${fontSizes.default.size};
+      line-height: ${fontSizes.default.lineHeight};
       font-family: ${fontFamilies.default};
       font-weight: ${fontWeights.light};
     `;
