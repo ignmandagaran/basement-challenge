@@ -20,6 +20,10 @@ const StyledButton = styled.button<IButtonProps>`
               box-shadow: ${shadows.sm};
               outline: 0;
             }
+
+            &:disabled {
+              opacity: 0.5;
+            }
           `
           : "";
 
