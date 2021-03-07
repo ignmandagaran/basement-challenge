@@ -63,31 +63,37 @@ const SideImage = styled.div`
       transform: scale(5);
     }
   }
+
+  @media (min-width: ${({ theme }) => theme.screens.sm}) {
+    display: block;
+  }
 `;
 
 const SideContent = styled.section`
   display: flex;
   justify-content: center;
-  flex-basis: 40%;
+  flex-basis: 100%;
   padding: 0 ${rem('20px')};
+
+  @media (min-width: ${({ theme }) => theme.screens.lg}) {
+    flex-basis: 40%;
+  }
 `;
 
 const Layout = styled.main`
   display: flex;
   justify-content: center;
   flex: 1;
-
-  @media (min-width: ${({ theme }) => theme.screens.sm}) {
-    ${SideImage} {
-      display: block;
-    }
-  }
 `;
 
 const SignUpContainer = styled.div`
   position: relative;
-  width: ${rem('400px')};
+  flex-basis: 100%;
   padding: ${rem('50px')} 0;
+
+  @media (min-width: ${({ theme }) => theme.screens.sm}) {
+    flex-basis: ${rem('400px')};
+  }
 `;
 
 const SignupHeader = styled.header`
