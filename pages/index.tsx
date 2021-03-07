@@ -6,10 +6,7 @@ import Text from "components/Text";
 import Divider from "components/Divider";
 import SocialButtons from "components/SocialButtons";
 import SignupForm from "components/SignupForm";
-
-const Title = styled.h1`
-  color: red;
-`;
+import { rem } from "polished";
 
 const Signup = () => {
 
@@ -72,7 +69,7 @@ const SideContent = styled.section`
   display: flex;
   justify-content: center;
   flex-basis: 40%;
-  padding: 0 20px;
+  padding: 0 ${rem('20px')};
 `;
 
 const Layout = styled.main`
@@ -89,18 +86,18 @@ const Layout = styled.main`
 
 const SignUpContainer = styled.div`
   position: relative;
-  width: 400px;
-  padding: 50px 0;
+  width: ${rem('400px')};
+  padding: ${rem('50px')} 0;
 `;
 
 const SignupHeader = styled.header`
-  padding-bottom: 32px;
+  padding-bottom: ${rem('32px')};
 `;
 
 const H1 = styled.h1`
   ${({ theme }) => {
     return`
-      margin: 15px 0 0 0;
+      margin: ${rem('15px')} 0 0 0;
       font-weight: ${theme.fontWeights.bold};
       font-size: ${theme.fontSizes.xl.size};
       line-height: ${theme.fontSizes.xl.lineHeight};
