@@ -1,16 +1,110 @@
+import React from "react";
+import Image from "next/image";
 import styled from "styled-components";
+import SEO from "components/SEO";
+import Text from "components/Text";
+import Divider from "components/Divider";
+import SocialButtons from "components/SocialButtons";
+import SignupForm from "components/SignupForm";
 
 const Title = styled.h1`
   color: red;
 `;
 
-const Home = () => {
+const Signup = () => {
+
   return (
     <>
-      <p>hello</p>
-      <Title>Title</Title>
+      <SEO title="Home" description="Sign up now!"/>
+      <Layout>
+        <SideContent>
+          <SignUpContainer>
+            <Image
+              src="/svg/logo.svg"
+              alt="BaseGit logo"
+              width="50px"
+              height="50px"
+            />
+            <SignupHeader>
+              <H1>Sign up to Basegit</H1>
+              <Text weight="light" margin="8px 0 0 0">BaseGit is the best way to store information.</Text>
+            </SignupHeader>
+            <Text>Continue with a provider</Text>
+            <SocialButtons />
+            <Divider>
+              <Text weight="light">Or with your work email</Text>
+            </Divider>
+            <SignupForm />
+          </SignUpContainer>
+        </SideContent>
+        <SideImage>
+            <Image src="/svg/rocket.svg" alt="Space rocket" layout="fill" objectFit="cover" />
+        </SideImage>
+      </Layout>
     </>
   );
 };
 
-export default Home;
+export default Signup;
+
+const SideImage = styled.div`
+  display: none;
+  flex-basis: 60%;
+  height: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background: ${({ theme }) => theme.colors.black};
+
+  img {
+    transition: all 35s ease-in-out;
+  }
+
+  &:hover {
+    img {
+      transition: all 300s linear;
+      transform: scale(5);
+    }
+  }
+`;
+
+const SideContent = styled.section`
+  display: flex;
+  justify-content: center;
+  flex-basis: 40%;
+  padding: 0 20px;
+`;
+
+const Layout = styled.main`
+  display: flex;
+  justify-content: center;
+  flex: 1;
+
+  @media (min-width: ${({ theme }) => theme.screens.sm}) {
+    ${SideImage} {
+      display: block;
+    }
+  }
+`;
+
+const SignUpContainer = styled.div`
+  position: relative;
+  width: 400px;
+  padding: 50px 0;
+`;
+
+const SignupHeader = styled.header`
+  padding-bottom: 32px;
+`;
+
+const H1 = styled.h1`
+  ${({ theme }) => {
+    return`
+      margin: 15px 0 0 0;
+      font-weight: ${theme.fontWeights.bold};
+      font-size: ${theme.fontSizes.xl.size};
+      line-height: ${theme.fontSizes.xl.lineHeight};
+      color: ${theme.colors.black};
+    `
+  }};
+`;

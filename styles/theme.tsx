@@ -10,9 +10,14 @@ export const theme = {
       600: '#4B5563',
       700: '#374151',
     },
+    error: '#FC3D21',
+  },
+  shadows: {
+    sm: '0px 1px 2px rgba(0, 0, 0, 0.05);',
   },
   fontSizes: {
     default: {size: rem('14px'), lineHeight: '1.43'},
+    m: {size: rem('16px'), lineHeight: '1.5'},
     xl: {size: rem('30px'), lineHeight: '1.2'},
   },
   fontFamilies: {
