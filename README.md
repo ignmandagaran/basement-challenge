@@ -13,4 +13,4 @@ then
 yarn run dev
 ```
 
-Deployed on Vercel: https://basemenet-challenge.vercel.app/
+Deployed on Vercel: https://basement-challenge-ignmandagaran.vercel.app/
