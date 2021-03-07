@@ -1,15 +1,14 @@
+# Nextjs Challenge made for basement.studio
 ## Setup: Nextjs, Typescript, styled-components and SSR with rehydration
-
-Hello!
 
 to start the project, simply run
 
 ```bash
-npm install
+yarn
 ```
 
 then
 
 ```bash
-npm run dev
+yarn run dev
 ```
