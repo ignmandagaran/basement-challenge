@@ -35,7 +35,7 @@ const Signup = () => {
           </SignUpContainer>
         </SideContent>
         <SideImage>
-            <Image src="/svg/rocket.svg" alt="Space rocket" layout="fill" objectFit="cover" />
+            <Image src="/images/rocket.png" alt="Space rocket" layout="fill" objectFit="cover" />
         </SideImage>
       </Layout>
     </>
