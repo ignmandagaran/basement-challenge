@@ -23,7 +23,7 @@ const Signup = () => {
               height="50px"
             />
             <SignupHeader>
-              <H1>Sign up to Basegit</H1>
+              <H1>Sign up to BaseGit</H1>
               <Text weight="light" margin="8px 0 0 0">BaseGit is the best way to store information.</Text>
             </SignupHeader>
             <Text>Continue with a provider</Text>
