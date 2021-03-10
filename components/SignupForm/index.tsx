@@ -45,8 +45,8 @@ const SignupForm = () => {
           const userArray =
             registeredUsers && registeredUsers.length && JSON.parse(registeredUsers);
 
-          const isRegisteredUser = userArray.find(
-            (user: { email: string; password: string }) => user.email === newUser.email
+          const isRegisteredUser = userArray.some(
+            (user: {email: string; password: string}) => user.email === newUser.email
           );
 
           setTimeout(() => {
